@@ -11,19 +11,16 @@ if (url.indexOf('?tag=') != -1) {
             }
         }
         if (a == 1) {
-            nt[nt.length] = text[i];
-        }
-    }
-    text = nt;
-    for (var i = 0; i < text.length; i++) {
-        $('.texts ul').append(`<li class='ripple'>
+            $('.texts ul').append(`<li class='ripple'>
         <a href="text.html?${i}">
             <h1>${text[i].title}</h1>
             <p>${text[i].main}</p>
             <span>${text[i].date[0]}/${text[i].date[1]}/${text[i].date[2]}</span>
         </a>
     </li>`)
-    };
+        }
+    }
+
 } else {
     $('.texts .tag_bar').hide();
     for (var i = 0; i < text.length; i++) {
