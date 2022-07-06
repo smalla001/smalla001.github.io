@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #e6e6e6;
+}
+
+.topbar {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    background-color: #00abe9;
+    overflow: hidden;
+    box-shadow: 0 0 10px #000000aa;
+    z-index: 9999;
+}
+
+.topbar .logo {
+    color: #fff;
+    float: left;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: 'Microsoft YaHei', Arial, Helvetica, sans-serif, serif;
+    font-weight: 550;
+    letter-spacing: 2px;
+}
+
+.topbar .fav {
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin: 5px 10px;
+    border-radius: 50%;
+}
+
+.topbar .search_bar {
+    width: 300px;
+    height: 30px;
+    margin: 10px 20%;
+    float: left;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.topbar .search_bar button {
+    width: 30px;
+    height: 30px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: #000;
+    float: left;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.topbar .search_bar button:hover {
+    color: #00abe9;
+}
+
+.topbar .search_bar .search_close {
+    display: none;
+}
+
+.topbar .menu {
+    font-size: 24px;
+    color: #fff;
+    float: right;
+    line-height: 50px;
+    width: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.topbar .search_bar input {
+    width: 270px;
+    height: 30px;
+    float: left;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+.texts,
+.text {
+    max-width: 850px;
+    margin: 0 auto;
+    transform: translateY(60px);
+    background-color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.text * {
+    outline: 0;
+    font-weight: 500;
+    text-align: left;
+    line-height: 40px;
+    font-size: 20px;
+    position: relative;
+    margin: 20px 0;
+}
+
+.text a {
+    position: relative;
+    color: #00abe9;
+}
+
+.text a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0px;
+    height: 2px;
+    background-color: #00abe9;
+    transition: all .3s;
+}
+
+.text a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.text a:active::after {
+    transform: scale(0.8);
+}
+
+.text h1,
+.text h2 {
+    color: var(--maincolor, #00baff);
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.text h1 {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.text h2 {
+    font-weight: 600;
+}
+
+.text p {
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.text h3 {
+    font-size: 20px;
+    margin-left: 30px;
+    opacity: 0.6;
+    font-weight: 300;
+}
+
+.text blockquote {
+    opacity: 0.8;
+    text-indent: 2em;
+    padding-left: 20px;
+    position: relative;
+    height: max-content;
+    margin-left: 20px;
+}
+
+.text blockquote:after {
+    content: '';
+    width: 3px;
+    height: 100%;
+    --maincolor: inherit;
+    background-color: var(--maincolor, #00baff);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.text img {
+    width: 100%;
+}
+
+.text .end .end-text {
+    text-align: center;
+    font-style: italic;
+    color: grey;
+}
+
+.text .end .bqs ul {
+    overflow: hidden;
+}
+
+.text .end .bqs ul li {
+    width: 100px;
+    margin: 5px 10px;
+    float: left;
+    line-height: 40px;
+    text-align: center;
+    background-color: #fafafa;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.text .end .bqs ul li a {
+    display: block;
+    color: #000;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 0;
+    font-size: 16px;
+    margin: 0;
+}
+
+.texts li {
+    width: 100%;
+    border-bottom: #e6e6e6 solid 1px;
+    color: #000;
+}
+
+.texts li h1 {
+    font-size: 30px;
+    color: #00baff;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    line-height: 60px;
+}
+
+.texts li p {
+    font-size: 16px;
+    line-height: 30px;
+    text-indent: 2em;
+    color: #000;
+}
+
+.texts li span {
+    font-size: 20px;
+    line-height: 60px;
+    color: #aaa;
+    text-align: right;
+    display: block;
+}
+
+.footer {
+    width: 100%;
+    height: max-content;
+    background-color: #00abe9;
+    color: #fff;
+    margin-top: 100px;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.footer h1 {
+    font-size: 24px;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    line-height: 50px;
+}
+
+.footer h2 {
+    font-size: 20px;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer a {
+    color: #fff;
+    display: inline-block;
+    position: relative;
+}
+
+.footer a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0px;
+    height: 2px;
+    background-color: #fff;
+    transition: all .3s;
+}
+
+.footer a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.footer a:active::after {
+    transform: scale(0.8);
+}
+
+.footer .l,
+.footer .r {
+    float: left;
+    width: 50%;
+}
+
+@media(max-width:600px) {
+    .footer .l,
+    .footer .r {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.right {
+    max-width: 400px;
+    width: 100%;
+    position: fixed;
+    top: 50px;
+    right: 0px;
+    bottom: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 999;
+    background-color: #fafafa;
+    box-shadow: -3px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.right::-webkit-scrollbar {
+    display: none;
+}
+
+.ripple {
+    overflow: hidden;
+    position: relative;
+}
+
+.ripple section {
+    position: absolute;
+    border-radius: 100%;
+    /* 向上向右平移本身的50%，使span在变大时保持位置不变 */
+    transform: translate(-50%, -50%);
+    background-color: rgba(231, 231, 231, 0.7);
+    animation: ripple 1000ms linear;
+    width: 0;
+    height: 0;
+    /* 无法点击 */
+    pointer-events: none;
+}
+
+.right .me {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 20px;
+    font-size: 20px;
+}
+
+.right .hr {
+    width: calc(100% - 40px);
+    height: 1px;
+    margin: 0 20px;
+    box-sizing: border-box;
+    background-color: #aaa;
+}
+
+.right .tag {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    overflow: hidden;
+    padding-bottom: 40px;
+}
+
+.right .tag h1 {
+    font-size: 24px;
+    color: #00abe9;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 50px;
+}
+
+.right li {
+    width: calc(50% - 20px);
+    margin: 5px 10px;
+    float: left;
+    line-height: 40px;
+    text-align: center;
+    background-color: #fafafa;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.right li a {
+    display: block;
+    color: #000;
+    width: 100%;
+    height: 100%;
+}
+
+.right_cover {
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 888;
+    background-color: rgba(173, 173, 173, 0.3);
+    pointer-events: none;
+    opacity: 0;
+    transition: all .3s;
+}
+
+@keyframes ripple {
+    0% {
+        width: 0;
+        height: 0;
+        background-color: rgba(190, 190, 190, 0.7);
+    }
+    10% {
+        width: 200%;
+        height: 200%;
+        background-color: rgba(173, 173, 173, 0.3);
+    }
+    100% {
+        width: 200%;
+        height: 200%;
+        background-color: rgba(148, 148, 148, 0);
+    }
+}
+
+@media(max-width:940px) {
+    .topbar .search_bar {
+        margin: 10px 10%;
+    }
+}
+
+@media(max-width:700px) {
+    .topbar .search_bar {
+        background-color: transparent;
+        width: 50px;
+        height: 50px;
+        float: right;
+        margin: auto;
+    }
+    .topbar .search_bar>* {
+        display: none;
+    }
+    .topbar .search_bar .search_btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        display: block;
+        color: #fff;
+        line-height: 50px;
+    }
+    .topbar .search_bar .search_btn:hover {
+        color: #fff;
+    }
+}
