@@ -40,27 +40,29 @@ $('.ripple').mousedown(function(e) {
         nspan.remove();
     }, 1200);
 });
-$('.right').css('right', (-$('.right').width() - 30) + 'px');
-$('.right').css('transition', 'all .3s');
+var rights = false;
 $('.topbar .menu').click(function() {
-    if ($('.right').css('right') == '0px') {
-        $('.right').css('right', (-$('.right').width() - 30) + 'px');
+    if (rights) {
+        $('.right').css('transform', 'translateX(110%)');
         $('.right_cover').css({
             'opacity': '0',
             'pointer-events': 'none'
-        })
+        });
+        rights = false;
     } else {
-        $('.right').css('right', '0px');
+        $('.right').css('transform', 'translateX(0)');
         $('.right_cover').css({
             'opacity': '1',
             'pointer-events': 'all'
-        })
+        });
+        rights = true;
     }
 });
 $('.right_cover').click(function() {
-    $('.right').css('right', (-$('.right').width() - 30) + 'px');
+    $('.right').css('transform', 'translateX(110%)');
     $('.right_cover').css({
         'opacity': '0',
         'pointer-events': 'none'
-    })
+    });
+    rights = false;
 })
