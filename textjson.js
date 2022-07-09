@@ -20,7 +20,7 @@ var text = [{
 &lt;/html&gt;</code></pre><p>接下来，我来讲讲每个标签的意思：<br>- &lt;!DOCTYPE html&gt; 这是最新HTML标准HTML5的网页声明，请加上去。<br>- &lt;html&gt; 它定义了整个HTML<br>- &lt;head&gt; 它是HTML的头部标签，用于交代网页相关信息，不会显示在网页上。<br>- &lt;meta charset='UTF-8'&gt; 它表示该文件的编码方式是UTF-8<br>- &lt;title&gt; 它表示该HTML文件的网页标题。<br>- &lt;body&gt; 它是HTML的总体标签，里面包含了网页的所有内容。<br>- &lt;h1&gt; 用于定义一个标题，对应还有&lt;h2&gt;~&lt;h6&gt;<br>- &lt;p&gt; 用于定义一个文本。</p><img src="https://s1.ax1x.com/2022/07/09/jrnxUK.png"/><p>运行结果如上图所示，你还可以在body里面继续添加标签试一试，本节课到此结束！</p></div>`,
     date: [2022, 7, 9],
     tag: ['HTML'],
-    jj: "HTML基础教程（1）By 陈思全前言：有些人让我做一个教程，我今天尝试做一个，如有错误请谅解并反馈。什么是HTML？HTML的专业术语是 超文本标记语言（我都听不懂，知道就好）它的文件后缀名通常为. ..."
+    main: "HTML基础教程（1）By 陈思全前言：有些人让我做一个教程，我今天尝试做一个，如有错误请谅解并反馈。什么是HTML？HTML的专业术语是 超文本标记语言（我都听不懂，知道就好）它的文件后缀名通常为. ..."
 },{
     title: "Simple Writer v1.0成功发行",
     text: `<p>Simple Writer 是一个简洁的写作工具，目前只能在<b>电脑</b>上使用（手机端我懒得开发）</p>
